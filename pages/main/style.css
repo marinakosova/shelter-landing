@@ -1,0 +1,1843 @@
+                                            /* RESET */
+                                            
+                                            *,
+                                            *::before,
+                                            *::after {
+                                                box-sizing: border-box;
+                                            }
+                                            /* GLOBAL STYLES */
+                                            
+                                            html {
+                                                font-size: 16px;
+                                            }
+                                            
+                                            body {
+                                                position: relative;
+                                                width: 100vw;
+                                                overflow-x: hidden;
+                                            }
+                                            /* Hide scrollbar for Chrome, Safari and Opera */
+                                            
+                                            body::-webkit-scrollbar {
+                                                display: none;
+                                            }
+                                            /* Hide scrollbar for IE, Edge and Firefox */
+                                            
+                                            body {
+                                                -ms-overflow-style: none;
+                                                /* IE and Edge */
+                                                scrollbar-width: none;
+                                                /* Firefox */
+                                            }
+                                            
+                                            .hidden {
+                                                overflow: hidden;
+                                            }
+                                            
+                                            button:focus {
+                                                outline: none;
+                                            }
+                                            /* HEADER STYLES */
+                                            
+                                            .header {
+                                                width: 100%;
+                                                height: 100vw;
+                                                position: absolute;
+                                                top: 1%;
+                                                padding: 0 3% 0 3%;
+                                            }
+                                            
+                                            .wrapper {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-justify-content: space-between;
+                                                -ms-flex-pack: justify;
+                                                justify-content: space-between;
+                                                max-width: 1280px;
+                                                margin: 0 auto;
+                                            }
+                                            
+                                            .logo {
+                                                cursor: pointer;
+                                            }
+                                            
+                                            .logo__title h1 {
+                                                color: #F1CDB3;
+                                                font-family: Georgia, serif;
+                                                font-size: 2rem;
+                                                font-weight: 400;
+                                                letter-spacing: 0.12rem;
+                                                line-height: 110%;
+                                            }
+                                            
+                                            .logo__subtitle {
+                                                margin-top: -10px;
+                                                color: #FFFFFF;
+                                                font-size: 0.8125rem;
+                                                font-weight: 400;
+                                                line-height: 110%;
+                                                letter-spacing: 0.1rem;
+                                                text-align: center;
+                                            }
+                                            /* logo burger */
+                                            
+                                            .logo_burger {
+                                                display: none;
+                                            }
+                                            
+                                            .logo__title_burger h1 {
+                                                padding: 0 0 0 10px;
+                                                color: #F1CDB3;
+                                                font-family: Georgia, serif;
+                                                font-size: 2rem;
+                                                font-weight: 400;
+                                                letter-spacing: 0.12rem;
+                                                line-height: 110%;
+                                            }
+                                            
+                                            .logo__subtitle_burger {
+                                                margin-top: -10px;
+                                                color: #FFFFFF;
+                                                font-size: 0.8125rem;
+                                                font-weight: 400;
+                                                line-height: 110%;
+                                                letter-spacing: 0.1rem;
+                                                text-align: left;
+                                            }
+                                            
+                                            .logo__subtitle_burger p {
+                                                padding: 0 0 0 10px;
+                                            }
+                                            /* NAVIGATION STYLES */
+                                            
+                                            .navbar {
+                                                width: 40%;
+                                                margin-top: 8px;
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                z-index: 1000;
+                                            }
+                                            /* burger */
+                                            
+                                            nav .burger-menu {
+                                                cursor: pointer;
+                                                z-index: 1001;
+                                            }
+                                            
+                                            .burger-menu a {
+                                                padding: 12px 0;
+                                            }
+                                            
+                                            .burger-menu a span {
+                                                position: relative;
+                                                display: block;
+                                                width: 30px;
+                                                height: 2px;
+                                                background: #F1CDB3;
+                                                -webkit-transition: all .4s ease-in;
+                                                -moz-transition: all .4s ease-in;
+                                                -ms-transition: all .4s ease-in;
+                                                -o-transition: all .4s ease-in;
+                                                transition: all .4s ease-in;
+                                            }
+                                            
+                                            .burger-menu a span:before,
+                                            span:after {
+                                                position: absolute;
+                                                background: #F1CDB3;
+                                                content: '';
+                                                width: 30px;
+                                                height: 2px;
+                                            }
+                                            
+                                            .burger-menu a span:before {
+                                                top: -11px;
+                                            }
+                                            
+                                            .burger-menu a span:after {
+                                                top: 11px;
+                                            }
+                                            
+                                            .burger-menu .toggle span {
+                                                transform: rotate(90deg);
+                                                transition: all .4s ease-out;
+                                            }
+                                            
+                                            .burger-menu {
+                                                display: none;
+                                            }
+                                            
+                                            .list {
+                                                width: 100%;
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-justify-content: space-between;
+                                                -ms-flex-pack: justify;
+                                                justify-content: space-between;
+                                            }
+                                            
+                                            .list-item {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-align-items: center;
+                                                -ms-flex-align: center;
+                                                align-items: center;
+                                            }
+                                            
+                                            .list-item-link {
+                                                color: #FAFAFA;
+                                                font-family: Arial, Helvetica, sans-serif;
+                                                font-size: 0.9375rem;
+                                                list-style-type: none;
+                                                text-decoration: none;
+                                                line-height: 160%;
+                                            }
+                                            
+                                            .list-item-link_disabled {
+                                                pointer-events: none;
+                                                color: #CDCDCD;
+                                            }
+                                            
+                                            .list-item:nth-child(2) {
+                                                cursor: pointer;
+                                            }
+                                            
+                                            .list-item-link_active {
+                                                border-bottom: 3px solid #F1CDB3;
+                                            }
+                                            /* MAIN STYLES */
+                                            
+                                            .main {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-flex-direction: column;
+                                                -ms-flex-direction: column;
+                                                flex-direction: column;
+                                            }
+                                            /* HERO STYLES */
+                                            
+                                            .hero {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                padding: 180px 3% 0 3%;
+                                                background: url("../../assets/images/noise_transparent@x.svg"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+                                                background-size: cover;
+                                            }
+                                            
+                                            .hero_content {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                            }
+                                            
+                                            .hero_section {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-flex-direction: column;
+                                                -ms-flex-direction: column;
+                                                flex-direction: column;
+                                                -webkit-justify-content: center;
+                                                -ms-flex-pack: center;
+                                                justify-content: center;
+                                                cursor: pointer;
+                                            }
+                                            
+                                            .hero_image {
+                                                width: 100%;
+                                            }
+                                            
+                                            .content_section {
+                                                display: inline-block;
+                                            }
+                                            
+                                            .content_section_title {
+                                                max-width: 19.375rem;
+                                                margin-top: 163px;
+                                                color: #FFFFFF;
+                                                font-size: 2.75rem;
+                                                font-weight: 400;
+                                                font-family: Georgia, serif;
+                                                line-height: 130%;
+                                            }
+                                            
+                                            .content_section_subtitle {
+                                                max-width: 94%;
+                                                margin-top: 2.625rem;
+                                                margin-bottom: 58px;
+                                                color: #CDCDCD;
+                                                font-family: Arial, Helvetica, sans-serif;
+                                                font-size: 0.9375rem;
+                                                line-height: 160%;
+                                            }
+                                            
+                                            .content_section_button {
+                                                cursor: pointer;
+                                                padding: 15px 47px;
+                                                border-radius: 100px;
+                                                border: none;
+                                                background-color: #F1CDB3;
+                                                color: #292929;
+                                                font-size: 1.0625rem;
+                                                text-decoration: none;
+                                                letter-spacing: 0.09em;
+                                            }
+                                            
+                                            a .content_section_button {
+                                                cursor: pointer;
+                                            }
+                                            
+                                            .content_section_button:hover {
+                                                background: #FDDCC4;
+                                            }
+                                            /* ABOUT STYLES */
+                                            
+                                            .about {
+                                                margin: 80px auto 90px auto;
+                                            }
+                                            
+                                            .about_wrapper {
+                                                margin: 0 175px 0 175px;
+                                            }
+                                            
+                                            .about_text {
+                                                -webkit-flex: 1 1 auto;
+                                                -ms-flex: 1 1 auto;
+                                                flex: 1 1 auto;
+                                                margin-left: 30px;
+                                                margin-top: -22px;
+                                            }
+                                            
+                                            .about_text_title {
+                                                margin-top: 36px;
+                                                margin-bottom: 23.5px;
+                                                font-family: Georgia, serif;
+                                                font-weight: 400;
+                                                font-size: 2.1875rem;
+                                                line-height: 130%;
+                                                letter-spacing: 0.06em;
+                                                color: #545454;
+                                            }
+                                            
+                                            .about_text_subtitle {
+                                                width: 91%;
+                                                padding-bottom: 10px;
+                                                color: #4C4C4C;
+                                                font-family: Arial, Helvetica, sans-serif;
+                                                font-size: 0.9375rem;
+                                                font-weight: 400;
+                                                line-height: 1.5rem;
+                                            }
+                                            
+                                            .about_image {
+                                                -webkit-flex: 0 0 430px;
+                                                -ms-flex: 0 0 430px;
+                                                flex: 0 0 430px;
+                                            }
+                                            
+                                            .about_image img {
+                                                max-width: 100%;
+                                                padding-left: 40px;
+                                            }
+                                            /* OUR FRIENDS STYLES */
+                                            
+                                            .our-friends {
+                                                background: #F6F6F6;
+                                            }
+                                            
+                                            .our-friends_wrapper {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-flex-direction: column;
+                                                -ms-flex-direction: column;
+                                                flex-direction: column;
+                                                padding: 0 3%;
+                                                padding-bottom: 113px;
+                                                overflow: hidden;
+                                            }
+                                            /* popup */
+                                            
+                                            .our-friends_slider_item .modal {
+                                                z-index: -1;
+                                            }
+                                            
+                                            .our-friends_arrow-left .modal,
+                                            .our-friends_arrow-right .modal {
+                                                z-index: -1;
+                                            }
+                                            
+                                            .modal {
+                                                width: 70%;
+                                                max-width: 70%;
+                                                height: 38%;
+                                                position: fixed;
+                                                top: 34%;
+                                                left: 50%;
+                                                transform: translate(-50%, -50%);
+                                                border-radius: 10px;
+                                                z-index: 100;
+                                                background-color: #fafafa;
+                                            }
+                                            
+                                            .modal-body {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-justify-content: center;
+                                                -ms-flex-pack: center;
+                                                justify-content: center;
+                                                -webkit-align-items: center;
+                                                -ms-flex-align: center;
+                                                align-items: center;
+                                            }
+                                            
+                                            .modal-body_image {
+                                                max-width: 50%;
+                                                width: 500px;
+                                                height: auto;
+                                                align-self: center;
+                                            }
+                                            
+                                            .modal-body_image img {
+                                                display: block;
+                                                margin-left: auto;
+                                                margin-right: auto;
+                                                max-width: 100%;
+                                            }
+                                            
+                                            .modal-body_content {
+                                                max-width: 50%;
+                                                padding: 0px 20px 0px 81px;
+                                                text-align: left;
+                                                color: #000000;
+                                            }
+                                            
+                                            .modal-body_content_title {
+                                                margin: 0;
+                                                margin-top: 28px;
+                                                font-family: Georgia, serif;
+                                                font-size: 2.1875rem;
+                                                font-weight: 400;
+                                                line-height: 130%;
+                                                letter-spacing: 0.06em;
+                                            }
+                                            
+                                            .modal-body_content_subtitle {
+                                                margin: 0;
+                                                padding-bottom: 9px;
+                                                font-family: Georgia, serif;
+                                                font-weight: 400;
+                                                font-size: 1.25rem;
+                                                line-height: 115%;
+                                                letter-spacing: 0.06em;
+                                            }
+                                            
+                                            .modal-body_content_text {
+                                                margin: 41px 0 -22px 0;
+                                                font-family: Georgia, serif;
+                                                font-weight: 400;
+                                                font-size: 0.9375rem;
+                                                line-height: 110%;
+                                                letter-spacing: 0.06em;
+                                            }
+                                            
+                                            .modal-body_content ul {
+                                                margin-top: 24px;
+                                                padding-top: 34px;
+                                                margin-left: -11px;
+                                                padding-inline-start: 10px;
+                                                color: #000000;
+                                                list-style: none;
+                                            }
+                                            
+                                            .modal-body_content ul li {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                padding: 5px 0px;
+                                                list-style-type: none;
+                                                text-decoration: none;
+                                            }
+                                            
+                                            .modal-body_content ul li::before {
+                                                display: inline-block;
+                                                padding-right: 10px;
+                                                content: "\2022";
+                                                /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                                                color: #F1CDB3;
+                                            }
+                                            
+                                            .modal-body_content ul li p {
+                                                margin: 0;
+                                            }
+                                            
+                                            .modal-body_content_list_item span {
+                                                font-weight: bold;
+                                            }
+                                            
+                                            .modal-body_content_list_item span:before,
+                                            .modal-body_content_list_item span:after {
+                                                height: 0px;
+                                            }
+                                            
+                                            .close-popup {
+                                                cursor: pointer;
+                                                display: none;
+                                                background-color: transparent;
+                                                z-index: 11;
+                                                font-size: 25px;
+                                                position: fixed;
+                                                top: 10%;
+                                                left: 84%;
+                                                border-radius: 50%;
+                                                padding: 11px 17px;
+                                                border: 2px solid #F1CDB3;
+                                                color: #000000;
+                                                z-index: 100;
+                                            }
+                                            /* arrows */
+                                            
+                                            .our-friends_arrow {
+                                                cursor: pointer;
+                                            }
+                                            
+                                            .our-friends_arrow-left {
+                                                position: absolute;
+                                                margin-left: 0.25rem;
+                                                margin-right: 12px;
+                                                left: 0;
+                                                top: 55%;
+                                            }
+                                            
+                                            .our-friends_arrow-right {
+                                                position: absolute;
+                                                margin-left: 12px;
+                                                right: 0;
+                                                top: 55%;
+                                            }
+                                            
+                                            .our-friends_arrow-left button,
+                                            .our-friends_arrow-right button {
+                                                cursor: pointer;
+                                                padding: 16.5px;
+                                                background-color: transparent;
+                                                border: 2px solid #F1CDB3;
+                                                box-sizing: border-box;
+                                                border-radius: 50%;
+                                            }
+                                            
+                                            .our-friends_arrow-left button:hover,
+                                            .our-friends_arrow-right button:hover {
+                                                background: #FDDCC4;
+                                                border: 2px solid #FDDCC4;
+                                            }
+                                            
+                                            .our-friends_slider {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                overflow: hidden;
+                                                max-width: 100%;
+                                                margin: -65px 10px 0px 0px;
+                                                transform: translateX(100%);
+                                                -webkit-transform: translateX(0%);
+                                            }
+                                            
+                                            .our-friends_wrapper_inner {
+                                                padding: 0 5%;
+                                                position: relative;
+                                                text-align: center;
+                                            }
+                                            
+                                            .our-friends_title h3 {
+                                                padding: 45px 30px 45px 30px;
+                                                font-family: Georgia, serif;
+                                                font-weight: 400;
+                                                font-size: 2.1875rem;
+                                                line-height: 130%;
+                                                letter-spacing: 0.06em;
+                                                color: #545454;
+                                            }
+                                            
+                                            .our-friends_slider_item {
+                                                min-width: 33.333%;
+                                                cursor: pointer;
+                                                padding: 45px 0px 0px 0px;
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-justify-content: center;
+                                                -ms-flex-pack: center;
+                                                justify-content: center;
+                                                /* -webkit-transition: all ease 5s;
+                                                -moz-transition: all ease 5s;
+                                                -ms-transition: all ease 5s;
+                                                -o-transition: all ease 5s;
+                                                transition: all ease 5s; */
+                                                animation: slide-in 0.5s forwards;
+                                                -webkit-animation: slide-in 0.5s forwards;
+                                            }
+                                            /* animation: slide-out 0.5s forwards;
+                                            -webkit-animation: slide-out 0.5s forwards; */
+                                            
+                                            @keyframes slide-in {
+                                                0% {
+                                                    -webkit-transform: translateX(33.33%);
+                                                }
+                                                100% {
+                                                    -webkit-transform: translateX(0%);
+                                                }
+                                            }
+                                            
+                                            @-webkit-keyframes slide-in {
+                                                0% {
+                                                    transform: translateX(33.33%);
+                                                }
+                                                100% {
+                                                    transform: translateX(0%);
+                                                }
+                                            }
+                                            
+                                            @keyframes slide-out {
+                                                0% {
+                                                    transform: translateX(0%);
+                                                }
+                                                100% {
+                                                    transform: translateX(33.33%);
+                                                }
+                                            }
+                                            
+                                            @-webkit-keyframes slide-out {
+                                                0% {
+                                                    -webkit-transform: translateX(0%);
+                                                }
+                                                100% {
+                                                    -webkit-transform: translateX(33.33%);
+                                                }
+                                            }
+                                            
+                                            .our-friends_slider_item:last-child {
+                                                margin-right: 0;
+                                            }
+                                            
+                                            .our-friends_slider_item_content {
+                                                height: 438px;
+                                                background: #FAFAFA;
+                                                border-radius: 9px;
+                                            }
+                                            
+                                            .our-friends .our-friends_slider .our-friends_slider_item_content:hover {
+                                                box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+                                            }
+                                            
+                                            .our-friends_slider_item_content img {
+                                                display: inline-flex;
+                                            }
+                                            
+                                            .our-friends_slider_item_content:hover {
+                                                background: #FFFFFF;
+                                            }
+                                            
+                                            .our-friends_slider_item_content h4 {
+                                                font-family: Georgia, serif;
+                                                font-weight: 400;
+                                                font-size: 1.25rem;
+                                                line-height: 23px;
+                                                letter-spacing: 0.06em;
+                                                color: #545454;
+                                            }
+                                            
+                                            .our-friends_slider_item_content button {
+                                                cursor: pointer;
+                                                padding: 16px 43px 15px 43px;
+                                                background: none;
+                                                border: 2px solid #F1CDB3;
+                                                box-sizing: border-box;
+                                                border-radius: 100px;
+                                            }
+                                            
+                                            .our-friends_slider_item_content button {
+                                                cursor: pointer;
+                                                color: #292929;
+                                                background: #FAFAFA;
+                                                font-family: Georgia, serif;
+                                                font-weight: 400;
+                                                font-size: 1.0625rem;
+                                                line-height: 130%;
+                                                letter-spacing: 0.06em;
+                                            }
+                                            
+                                            .our-friends_slider_item_content button:hover {
+                                                background: #FDDCC4;
+                                                border: 2px solid #FDDCC4;
+                                            }
+                                            
+                                            .our-friends_button {
+                                                padding-top: 72px;
+                                            }
+                                            
+                                            .our-friends_button a {
+                                                cursor: pointer;
+                                                padding: 15px 45px 15px 45px;
+                                                background: #F1CDB3;
+                                                border-radius: 100px;
+                                                border: none;
+                                                color: #292929;
+                                                font-family: Georgia, serif;
+                                                font-weight: 400;
+                                                text-decoration: none;
+                                                font-size: 1.0625rem;
+                                                line-height: 130%;
+                                                letter-spacing: 0.06em;
+                                            }
+                                            
+                                            .our-friends_button a:hover {
+                                                background: #FDDCC4;
+                                            }
+                                            /* HELP STYLES */
+                                            
+                                            .help {
+                                                background: #FFFFFF;
+                                            }
+                                            
+                                            .help_wrapper {
+                                                padding: 0 3%;
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-flex-direction: column;
+                                                -ms-flex-direction: column;
+                                                flex-direction: column;
+                                                -webkit-justify-content: center;
+                                                -ms-flex-pack: center;
+                                                justify-content: center;
+                                                -webkit-align-items: center;
+                                                -ms-flex-align: center;
+                                                align-items: center;
+                                            }
+                                            
+                                            .help_title {
+                                                width: 30%;
+                                            }
+                                            
+                                            .help_title h3 {
+                                                padding-top: 45px;
+                                                font-family: Georgia, serif;
+                                                font-weight: 400;
+                                                font-size: 2.1875rem;
+                                                line-height: 130%;
+                                                letter-spacing: 0.06em;
+                                                color: #545454;
+                                                text-align: center;
+                                            }
+                                            
+                                            .help_icons {
+                                                cursor: pointer;
+                                                width: 85.5%;
+                                                padding-top: 15px;
+                                                margin-bottom: 65px;
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-flex-direction: column;
+                                                -ms-flex-direction: column;
+                                                flex-direction: column;
+                                                -webkit-justify-content: center;
+                                                -ms-flex-pack: center;
+                                                justify-content: center;
+                                            }
+                                            
+                                            .help_icons h4 {
+                                                font-family: Georgia, serif;
+                                                font-weight: 400;
+                                                font-size: 1.25rem;
+                                                line-height: 115%;
+                                                letter-spacing: 0.06em;
+                                                color: #545454;
+                                            }
+                                            
+                                            .help_icons_item-inner {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-justify-content: space-between;
+                                                -ms-flex-pack: justify;
+                                                justify-content: space-between;
+                                                -webkit-flex-wrap: wrap;
+                                                -ms-flex-wrap: wrap;
+                                                flex-wrap: wrap;
+                                                -webkit-align-items: flex-end;
+                                                -ms-flex-align: end;
+                                                align-items: flex-end;
+                                                padding-right: 14px;
+                                            }
+                                            
+                                            .help_icons_item {
+                                                text-align: center;
+                                                text-align: -moz-center;
+                                                text-align: -webkit-center;
+                                                padding: 12px 57px;
+                                            }
+                                            
+                                            .help_icons_item:first-child {
+                                                padding-left: 0;
+                                            }
+                                            
+                                            .help_icons_item:last-child {
+                                                padding-right: 71px;
+                                            }
+                                            
+                                            .help_icons_item:nth-child(4) {
+                                                padding-right: 59px;
+                                            }
+                                            
+                                            .help_icons_item:nth-child(5) {
+                                                width: 133px;
+                                                padding-right: 0;
+                                                padding-left: 40px;
+                                            }
+                                            
+                                            .help_icons_item:nth-child(6) {
+                                                padding-left: 90px;
+                                            }
+                                            /* IN ADDITION STYLES */
+                                            
+                                            .addition {
+                                                background: #F6F6F6;
+                                            }
+                                            
+                                            .addition_wrapper {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                margin: 0 auto;
+                                                padding: 92px 120px 92px 178px;
+                                            }
+                                            
+                                            .addition_text {
+                                                -webkit-flex: 1 1 auto;
+                                                -ms-flex: 1 1 auto;
+                                                flex: 1 1 auto;
+                                                margin-left: 35px;
+                                            }
+                                            
+                                            .addition_text h3 {
+                                                width: 70%;
+                                            }
+                                            
+                                            .addition_text_title {
+                                                margin-bottom: 20px;
+                                                margin-top: -11px;
+                                                font-family: Georgia, serif;
+                                                font-weight: 400;
+                                                font-size: 2.1875rem;
+                                                line-height: 130%;
+                                                letter-spacing: 0.06em;
+                                                color: #545454;
+                                            }
+                                            
+                                            .addition_text_subtitle {
+                                                color: #545454;
+                                                font-family: Georgia, serif;
+                                                font-size: 0.9375rem;
+                                                font-weight: 400;
+                                                line-height: 110%;
+                                                letter-spacing: 0.06em;
+                                            }
+                                            
+                                            .addition_image {
+                                                -webkit-flex: 0 0 auto;
+                                                -ms-flex: 0 0 auto;
+                                                flex: 0 0 auto;
+                                            }
+                                            
+                                            .addition_text h5 {
+                                                cursor: pointer;
+                                                padding: 12px 14px 10px 20px;
+                                                margin-top: 2px;
+                                                display: inline-flex;
+                                                font-family: Georgia, serif;
+                                                font-weight: 400;
+                                                font-size: 1.25rem;
+                                                line-height: 115%;
+                                                align-items: center;
+                                                letter-spacing: 0.06em;
+                                                color: #545454;
+                                                background: #F1CDB3;
+                                                border-radius: 9px;
+                                            }
+                                            
+                                            .addition_text h5 img {
+                                                margin-left: -5px;
+                                                margin-right: 15px;
+                                            }
+                                            
+                                            .about_text_sub_subtitle {
+                                                width: 85%;
+                                                margin-top: -15px;
+                                                font-family: Arial, Helvetica, sans-serif;
+                                                font-style: italic;
+                                                font-weight: 400;
+                                                font-size: 0.75rem;
+                                                line-height: 150%;
+                                                color: #B2B2B2;
+                                            }
+                                            /* FOOTER STYLES */
+                                            
+                                            footer {
+                                                width: 100%;
+                                                height: 350px;
+                                                overflow: hidden;
+                                                background: url("../../assets/images/noise_transparent@x.svg"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+                                                background-size: cover;
+                                            }
+                                            
+                                            .footer_wrapper {
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-flex-wrap: nowrap;
+                                                -ms-flex-wrap: nowrap;
+                                                flex-wrap: nowrap;
+                                                -webkit-justify-content: space-between;
+                                                -ms-flex-pack: justify;
+                                                justify-content: space-between;
+                                                margin: 22px auto 40px auto;
+                                                padding: 0 3%;
+                                            }
+                                            
+                                            .footer_wrapper_block ul li a {
+                                                display: inline-flex;
+                                            }
+                                            
+                                            .footer_wrapper_block {
+                                                width: 27%;
+                                            }
+                                            
+                                            .footer_wrapper_block_content h3 {
+                                                margin-bottom: 24px;
+                                                font-family: Georgia, serif;
+                                                font-weight: 400;
+                                                font-size: 2.1875rem;
+                                                line-height: 130%;
+                                                letter-spacing: 0.06em;
+                                                color: #FFFFFF;
+                                            }
+                                            
+                                            .footer_wrapper_block_content ul {
+                                                padding-inline-start: 0px;
+                                            }
+                                            
+                                            .footer_wrapper_block_content ul li {
+                                                font-family: Georgia, serif;
+                                                font-size: 1.25rem;
+                                                font-weight: 400;
+                                                line-height: 124%;
+                                                letter-spacing: 0.06em;
+                                                list-style-type: none;
+                                            }
+                                            
+                                            .footer_wrapper_block_content ul a {
+                                                color: #F1CDB3;
+                                                text-decoration: none;
+                                            }
+                                            
+                                            .footer_wrapper_block_content img {
+                                                padding-right: 21px;
+                                            }
+                                            
+                                            .footer_wrapper_block_image {
+                                                width: auto;
+                                                margin-top: 17px;
+                                            }
+                                            
+                                            .footer_wrapper_block_image img {
+                                                max-width: 100%;
+                                            }
+                                            
+                                            .footer_wrapper_block_content-right {
+                                                margin-left: -10px;
+                                            }
+                                            
+                                            .footer_wrapper_block_content-right h3 {
+                                                margin-bottom: -5px;
+                                            }
+                                            
+                                            .footer_wrapper_block_content-right ul li {
+                                                line-height: 114%;
+                                            }
+                                            
+                                            footer .last-link {
+                                                margin-top: -4px;
+                                            }
+                                            /* MEDIA QUERIES STYLES */
+                                            
+                                            @media screen and (min-width: 1281px) {
+                                                .help_wrapper {
+                                                    padding: 0px;
+                                                }
+                                                .shadow .overlay {
+                                                    background-color: rgba(41, 41, 41, 0.6);
+                                                    position: fixed;
+                                                    height: 100vh;
+                                                    width: 100vw;
+                                                    top: 0;
+                                                    left: 0;
+                                                }
+                                            }
+                                            
+                                            @media screen and (max-width: 1279px) {
+                                                /* HERO STYLES */
+                                                .list {
+                                                    padding-left: 0;
+                                                }
+                                                .hero_content {
+                                                    display: block;
+                                                    text-align: center;
+                                                    line-height: 0;
+                                                    z-index: 11111111;
+                                                }
+                                                .hero_section {
+                                                    padding: 0 7.8125rem;
+                                                    text-align: left;
+                                                }
+                                                .content_section {
+                                                    display: inline-block;
+                                                    padding: 60px 8.75rem 0 8.75rem;
+                                                }
+                                                .content_section_title {
+                                                    margin-top: 0;
+                                                    text-align: left;
+                                                }
+                                                .content_section_subtitle {
+                                                    margin-bottom: 65px;
+                                                    text-align: justify;
+                                                }
+                                                .hero_image img {
+                                                    display: block;
+                                                }
+                                                .hero_image {
+                                                    width: auto;
+                                                    padding-top: 124px;
+                                                    margin: 0;
+                                                }
+                                                /* ABOUT STYLES */
+                                                .about_wrapper {
+                                                    flex-direction: column;
+                                                    -webkit-justify-content: center;
+                                                    -ms-flex-pack: center;
+                                                    justify-content: center;
+                                                    -webkit-align-items: center;
+                                                    -ms-flex-align: center;
+                                                    align-items: center;
+                                                }
+                                                .about_text {
+                                                    margin: 0;
+                                                    margin-bottom: 80px;
+                                                    order: 1;
+                                                }
+                                                .about_image {
+                                                    order: 2;
+                                                }
+                                                .about_text_title {
+                                                    margin: 0;
+                                                }
+                                                .about_text_subtitle {
+                                                    width: 100%;
+                                                }
+                                                .about_image img {
+                                                    padding: 0;
+                                                }
+                                                /* OUR FRIENDS STYLES */
+                                                .our-friends_slider {
+                                                    display: -webkit-inline-box;
+                                                    display: inline-flex;
+                                                }
+                                                .our-friends_slider_item {
+                                                    margin-left: 20px;
+                                                    margin-right: 20px;
+                                                }
+                                                .our-friends_wrapper_inner {
+                                                    padding: 0 8%;
+                                                }
+                                                /* HELP STYLES */
+                                                .help_icons_item-inner {
+                                                    -webkit-flex-wrap: wrap;
+                                                    -ms-flex-wrap: wrap;
+                                                    flex-wrap: wrap;
+                                                    -webkit-justify-content: space-around;
+                                                    -ms-flex-pack: distribute;
+                                                    justify-content: space-around;
+                                                }
+                                                .help_title {
+                                                    width: 100%;
+                                                }
+                                                .help_wrapper {
+                                                    padding: 0 18%;
+                                                }
+                                                .help_icons {
+                                                    -webkit-flex-wrap: wrap;
+                                                    -ms-flex-wrap: wrap;
+                                                    flex-wrap: wrap;
+                                                    width: 100%;
+                                                }
+                                                .help_icons_item {
+                                                    padding-left: 45px;
+                                                    padding-right: 45px;
+                                                }
+                                                .help_icons_item:first-child {
+                                                    padding-left: 45px;
+                                                }
+                                                .help_icons_item:last-child {
+                                                    padding-right: 45px;
+                                                }
+                                                .help_icons_item:nth-child(4) {
+                                                    padding-right: 45px;
+                                                }
+                                                .help_icons_item:nth-child(5) {
+                                                    width: 160px;
+                                                    padding-right: 45px;
+                                                    padding-left: 45px;
+                                                }
+                                                .help_icons_item:nth-child(6) {
+                                                    padding-left: 45px;
+                                                }
+                                                /* ADDITION STYLES */
+                                                .addition_wrapper {
+                                                    -webkit-flex-direction: column;
+                                                    -ms-flex-direction: column;
+                                                    flex-direction: column;
+                                                    -webkit-justify-content: center;
+                                                    -ms-flex-pack: center;
+                                                    justify-content: center;
+                                                    -webkit-align-items: center;
+                                                    -ms-flex-align: center;
+                                                    align-items: center;
+                                                }
+                                                .addition_text {
+                                                    order: 1;
+                                                }
+                                                .addition_image {
+                                                    order: 2;
+                                                    width: 100%;
+                                                }
+                                                .addition_image img {
+                                                    padding-top: 60px;
+                                                }
+                                                /* MODAL WINDOW STYLES */
+                                                .modal {
+                                                    width: 80%;
+                                                    max-width: 100%;
+                                                    height: 34%;
+                                                    top: 34%;
+                                                    left: 50%;
+                                                    z-index: 100;
+                                                }
+                                                .modal-body_image {
+                                                    max-width: 50%;
+                                                }
+                                                .modal-body_content {
+                                                    padding: 0px 0px 0px 60px;
+                                                }
+                                                .modal-body_content_title {
+                                                    margin-top: 6px;
+                                                }
+                                                .modal-body_content_subtitle {
+                                                    padding-top: 10px;
+                                                }
+                                                .modal-body_content_text {
+                                                    margin: 20px 0 -46px 0;
+                                                }
+                                                .modal-body_content ul {
+                                                    margin-top: 31px;
+                                                    padding-top: 33px;
+                                                    margin-left: -11px;
+                                                }
+                                                .shadow .overlay {
+                                                    background-color: rgba(41, 41, 41, 0.6);
+                                                    position: fixed;
+                                                    height: 100vh;
+                                                    width: 100vw;
+                                                    top: 0;
+                                                    left: 0;
+                                                    z-index: 100;
+                                                }
+                                            }
+                                            
+                                            @media screen and (max-width: 1100px) {
+                                                /* HERO STYLES */
+                                                .header {
+                                                    padding: 0 3% 0 3%;
+                                                }
+                                                .help_wrapper {
+                                                    padding: 0 15%;
+                                                }
+                                                .help_icons_item:nth-child(5) {
+                                                    width: 150px;
+                                                }
+                                                /* FOOTER STYLES */
+                                                footer {
+                                                    height: 100%;
+                                                }
+                                                .footer_wrapper {
+                                                    -webkit-flex-wrap: wrap;
+                                                    -ms-flex-wrap: wrap;
+                                                    flex-wrap: wrap;
+                                                    -webkit-box-pack: space-evenly;
+                                                    -ms-flex-pack: space-evenly;
+                                                    justify-content: space-evenly;
+                                                    margin: 22px auto 0px auto;
+                                                }
+                                                .footer_wrapper_block {
+                                                    width: 35%;
+                                                }
+                                                .footer_wrapper_block_image {
+                                                    width: 100%;
+                                                    text-align: center;
+                                                }
+                                            }
+                                            
+                                            @media screen and (max-width: 1024px) {
+                                                /* HERO STYLES */
+                                                .navbar {
+                                                    width: 50%;
+                                                }
+                                                .help_wrapper {
+                                                    padding: 0 12%;
+                                                }
+                                                .help_icons_item:nth-child(5) {
+                                                    width: 180px;
+                                                }
+                                                /* FOOTER STYLES */
+                                                .footer_wrapper_block {
+                                                    width: 45%;
+                                                }
+                                            }
+                                            
+                                            @media screen and (max-width: 900px) {
+                                                /* HERO STYLES */
+                                                .navbar {
+                                                    width: 63%;
+                                                }
+                                                .hero_image {
+                                                    width: 80%;
+                                                }
+                                            }
+                                            
+                                            @media screen and (max-width: 920px) {
+                                                /* HERO STYLES */
+                                                .help_wrapper {
+                                                    padding: 0 8%;
+                                                }
+                                                .help_icons_item:nth-child(5) {
+                                                    width: 180px;
+                                                }
+                                            }
+                                            
+                                            @media screen and (max-width: 825px) {
+                                                /* HERO STYLES */
+                                                .help_wrapper {
+                                                    padding: 0 5%;
+                                                }
+                                                .help_icons_item:nth-child(5) {
+                                                    width: 170px;
+                                                }
+                                            }
+                                            
+                                            @media screen and (max-width: 768px) {
+                                                /* HERO STYLES */
+                                                .header {
+                                                    top: 10px;
+                                                    padding: 0 30px 0 30px;
+                                                }
+                                                .logo__subtitle {
+                                                    margin-top: -14px;
+                                                }
+                                                .hero {
+                                                    height: 100%;
+                                                    padding: 92px 45px 0 45px;
+                                                }
+                                                .hero_content {
+                                                    z-index: 0;
+                                                }
+                                                .hero_image {
+                                                    width: 84%;
+                                                    margin-left: 126px;
+                                                    line-height: 0;
+                                                }
+                                                .content_section {
+                                                    padding: 60px 110px 0 110px;
+                                                }
+                                                .content_section_subtitle {
+                                                    max-width: 100%;
+                                                }
+                                                /* ABOUT STYLES */
+                                                .about {
+                                                    margin: 80px auto 76px auto;
+                                                }
+                                                .about_wrapper {
+                                                    margin: 0 165px 0 165px;
+                                                }
+                                                .about_text {
+                                                    margin-bottom: 58px;
+                                                }
+                                                .about_text_title {
+                                                    padding-bottom: 10px;
+                                                }
+                                                .about_text_subtitle {
+                                                    padding-bottom: 9px;
+                                                }
+                                                .addition_image img {
+                                                    width: 100%;
+                                                }
+                                                /* ABOUT STYLES */
+                                                .our-friends_title h3 {
+                                                    padding: 49px 45px 40px 45px;
+                                                }
+                                                .our-friends_slider {
+                                                    margin: -63px 12px 0px 14px;
+                                                    gap: 39px;
+                                                }
+                                                .our-friends_slider_item {
+                                                    margin-left: 0px;
+                                                    margin-right: 0px;
+                                                }
+                                                .our-friends_arrow-left {
+                                                    margin-left: 7px;
+                                                }
+                                                .our-friends_arrow-right {
+                                                    margin-right: 7px;
+                                                }
+                                                .our-friends_button button {
+                                                    margin-left: 0px;
+                                                }
+                                                /* HELP STYLES */
+                                                .help_title h3 {
+                                                    padding-top: 48px;
+                                                    margin-left: 5px;
+                                                }
+                                                .help_icons_item {
+                                                    padding: 0px 0;
+                                                    margin: 0px;
+                                                }
+                                                .help_icons_item {
+                                                    padding-left: 0;
+                                                    padding-right: 0;
+                                                    width: 170px;
+                                                }
+                                                .help_icons_item:first-child {
+                                                    padding-left: 0px;
+                                                }
+                                                .help_icons_item::nth-child(3) {
+                                                    padding-right: 0px;
+                                                }
+                                                .help_icons_item:last-child {
+                                                    padding-right: 0px;
+                                                }
+                                                .help_icons_item:nth-child(4) {
+                                                    padding-right: 0;
+                                                }
+                                                .help_icons_item:nth-child(5) {
+                                                    padding-right: 0;
+                                                    padding-left: 0;
+                                                    width: 170px;
+                                                }
+                                                .help_icons_item:nth-child(6) {
+                                                    padding-right: 0px;
+                                                    padding-left: 5px;
+                                                }
+                                                .help_icons_item-inner {
+                                                    display: inline-grid;
+                                                    grid-template-columns: auto auto auto;
+                                                    grid-row-gap: 30px;
+                                                    padding-right: 14px;
+                                                    padding-left: 14px;
+                                                }
+                                                .help_icons {
+                                                    padding-top: 21px;
+                                                }
+                                                .addition_text {
+                                                    margin-left: 16px;
+                                                }
+                                                .addition_wrapper {
+                                                    padding: 98px 120px 91px 178px;
+                                                }
+                                                .about_text_sub_subtitle {
+                                                    width: 84%;
+                                                }
+                                                .addition_image {
+                                                    width: 505px;
+                                                    margin-left: 67px;
+                                                    margin-bottom: 7px;
+                                                }
+                                                .addition_image img {
+                                                    padding-top: 48px;
+                                                    margin-left: -61px;
+                                                }
+                                                .footer_wrapper {
+                                                    margin: -5px auto 0px auto;
+                                                }
+                                                .footer_wrapper_block {
+                                                    width: 42%;
+                                                }
+                                                .footer_wrapper_block_content-right {
+                                                    margin-left: 0px;
+                                                }
+                                                .footer_wrapper_block_image {
+                                                    margin-top: 26px;
+                                                    margin-right: 0px;
+                                                    line-height: 0;
+                                                }
+                                                /* MODAL STYLES */
+                                                .modal-body_image {
+                                                    width: 350px;
+                                                }
+                                                .close-popup {
+                                                    top: 16%;
+                                                    left: 89%;
+                                                }
+                                                .modal-body_content {
+                                                    padding: 0px 5px 0px 60px;
+                                                }
+                                                .modal-body_content ul li {
+                                                    padding: 1px 0;
+                                                }
+                                            }
+                                            
+                                            @media screen and (max-width: 767px) {
+                                                /* HERO STYLES */
+                                                .navbar {
+                                                    display: none;
+                                                    z-index: 1000;
+                                                }
+                                                .burger-menu {
+                                                    display: block;
+                                                    margin-top: 51px;
+                                                    z-index: 1001;
+                                                }
+                                                .burger-menu-active {
+                                                    display: block;
+                                                    position: fixed;
+                                                    margin-top: 0px;
+                                                    top: 0;
+                                                    right: 0;
+                                                    width: 320px;
+                                                    height: 100vh;
+                                                    background: #292929;
+                                                    -webkit-transform: translate3d(100vw, 0, 0);
+                                                    -ms-transform: translate3d(100vw, 0, 0);
+                                                    transform: translate3d(100vw, 0, 0);
+                                                    /*-webkit-transition: transform .5s cubic-bezier(0, .52, 0, 1);
+                                                    -webkit-transition: transform .5s cubic-bezier(0, .52, 0, 1);
+                                                    -webkit-transition: transform .5s cubic-bezier(0, .52, 0, 1);
+                                                    -webkit-transition: transform .5s cubic-bezier(0, .52, 0, 1);
+                                                    transition: transform .5s cubic-bezier(0, .52, 0, 1);*/
+                                                    -webkit-transition: transform ease-out 1s;
+                                                    -webkit-transition: transform ease-out 1s;
+                                                    -webkit-transition: transform ease-out 1s;
+                                                    -webkit-transition: transform ease-out 1s;
+                                                    transition: transform ease-out 1s;
+                                                }
+                                                .burger-menu-active .list {
+                                                    display: block;
+                                                    margin-top: 248px;
+                                                    text-align: center;
+                                                }
+                                                .burger-menu-active .list-item {
+                                                    margin-bottom: 20px;
+                                                }
+                                                .burger-menu-active .list-item-link {
+                                                    margin: 0 auto;
+                                                    font-size: 32px;
+                                                }
+                                                .burger-menu-active .logo_burger {
+                                                    display: block;
+                                                    z-index: 100;
+                                                }
+                                                .show {
+                                                    display: block;
+                                                    position: fixed;
+                                                    margin-top: 0px;
+                                                    top: 0;
+                                                    right: 0;
+                                                    width: 320px;
+                                                    height: 100vh;
+                                                    overflow-y: hidden;
+                                                    background: #292929;
+                                                    -webkit-transform: translate3d(0vw, 0, 0);
+                                                    -ms-transform: translate3d(0vw, 0, 0);
+                                                    transform: translate3d(0vw, 0, 0);
+                                                    -webkit-transition: transform ease-out 500ms;
+                                                    -webkit-transition: transform ease-out 500ms;
+                                                    -webkit-transition: transform ease-out 500ms;
+                                                    -webkit-transition: transform ease-out 500ms;
+                                                    transition: transform ease-out 500ms;
+                                                }
+                                                .show .list {
+                                                    display: block;
+                                                    margin-top: 248px;
+                                                    text-align: center;
+                                                }
+                                                .show .list-item {
+                                                    margin-bottom: 20px;
+                                                }
+                                                .show .list-item-link {
+                                                    margin: 0 auto;
+                                                    font-size: 32px;
+                                                }
+                                                .show .logo_burger {
+                                                    display: block;
+                                                    z-index: 100;
+                                                }
+                                                .show body {
+                                                    overflow: hidden;
+                                                }
+                                                .shadow .overlay {
+                                                    background-color: rgba(41, 41, 41, 0.6);
+                                                    position: fixed;
+                                                    height: 100vh;
+                                                    width: 100vw;
+                                                    top: 0;
+                                                    left: 0;
+                                                    z-index: 99;
+                                                }
+                                                .hero {
+                                                    height: 100%;
+                                                }
+                                                .hero_image {
+                                                    margin-left: 0px;
+                                                }
+                                                .content_section {
+                                                    padding: 60px 0px 0 0px;
+                                                }
+                                                .content_section_title {
+                                                    text-align: center;
+                                                    max-width: 100%;
+                                                }
+                                                /* ABOUT STYLES */
+                                                .about_wrapper {
+                                                    margin: 0 15px 0 15px;
+                                                }
+                                                .about_text_title {
+                                                    text-align: center;
+                                                }
+                                                .about_text_subtitle {
+                                                    text-align: justify;
+                                                }
+                                                /* OUR FRIENDS STYLES */
+                                                .our-friends_wrapper {
+                                                    padding-bottom: 58px;
+                                                }
+                                                .our-friends_arrow-left {
+                                                    top: 84%;
+                                                    left: 30%;
+                                                }
+                                                .our-friends_arrow-right {
+                                                    top: 84%;
+                                                    right: 30%;
+                                                }
+                                                .our-friends_button {
+                                                    padding-top: 175px;
+                                                }
+                                                .help_icons_item {
+                                                    width: 130px;
+                                                }
+                                                .help_icons_item-inner {
+                                                    grid-template-columns: auto auto;
+                                                }
+                                                /* ADDITION STYLES */
+                                                .addition_wrapper {
+                                                    padding: 98px 15px 100px 15px;
+                                                }
+                                                .addition_text {
+                                                    text-align: center;
+                                                    margin-left: 0px;
+                                                }
+                                                .addition_image img {
+                                                    max-width: 100%;
+                                                    margin-left: 0px;
+                                                }
+                                                .addition_image {
+                                                    margin: 0;
+                                                    width: auto;
+                                                }
+                                                .about_text_sub_subtitle {
+                                                    width: 100%;
+                                                }
+                                                .addition_text_credit {
+                                                    width: 100%;
+                                                }
+                                                /* FOOTER STYLES */
+                                                .footer_wrapper_block {
+                                                    order: 1;
+                                                    width: 100%;
+                                                    text-align: center;
+                                                }
+                                                .footer_wrapper_block_image {
+                                                    order: 3;
+                                                }
+                                                /* MODAL STYLES */
+                                                .modal {
+                                                    width: 76%;
+                                                    height: 32%;
+                                                    top: 35%;
+                                                    z-index: 100;
+                                                }
+                                                .modal-body_image {
+                                                    display: none;
+                                                }
+                                                .modal-body_content {
+                                                    max-width: 100%;
+                                                    padding: 0px 5px 0px 5px;
+                                                }
+                                                .close-popup {
+                                                    top: 13%;
+                                                    left: 81%;
+                                                }
+                                                .modal-body_content_title {
+                                                    margin-top: 15px;
+                                                }
+                                                .modal-body_content_text {
+                                                    margin: 14px 0 -46px 0;
+                                                }
+                                                .modal-body_content_title {
+                                                    text-align: -webkit-center;
+                                                    text-align: center;
+                                                }
+                                                .modal-body_content_subtitle {
+                                                    text-align: -webkit-center;
+                                                    text-align: center;
+                                                }
+                                                .modal-body_content_text {
+                                                    text-align: justify;
+                                                }
+                                                .modal-body_content ul {
+                                                    margin-top: 18px;
+                                                }
+                                            }
+                                            
+                                            @media screen and (max-width: 320px) {
+                                                /* HERO STYLES */
+                                                .header {
+                                                    padding: 0 10px 0 10px;
+                                                }
+                                                .burger-menu {
+                                                    margin-right: 45px;
+                                                }
+                                                .hero {
+                                                    padding: 92px 0px 0px 0px;
+                                                }
+                                                .content_section_title {
+                                                    max-width: 100%;
+                                                    font-size: 25px;
+                                                    letter-spacing: 1.1px;
+                                                }
+                                                .content_section_subtitle {
+                                                    padding-left: 10px;
+                                                    padding-right: 10px;
+                                                    font-size: 15px;
+                                                    letter-spacing: 0.3px;
+                                                    text-align: center;
+                                                }
+                                                .hero_image {
+                                                    width: 82%;
+                                                    margin-left: 35px;
+                                                    padding-top: 129px;
+                                                }
+                                                /* ABOUT STYLES */
+                                                .about_text_title {
+                                                    font-size: 25px;
+                                                }
+                                                .about {
+                                                    margin: 41px auto -41px auto;
+                                                }
+                                                .about_wrapper {
+                                                    margin: 0 20px 0 20px;
+                                                }
+                                                .about_text_subtitle {
+                                                    padding-bottom: 6px;
+                                                    letter-spacing: 0.3px;
+                                                    font-size: 15px;
+                                                }
+                                                .about_image {
+                                                    text-align: center;
+                                                }
+                                                .about_image img {
+                                                    width: 91%;
+                                                }
+                                                .about_text {
+                                                    margin-bottom: 27px;
+                                                }
+                                                /* OUR FRIENDS STYLES */
+                                                .our-friends_title h3 {
+                                                    padding: 19px 5px 40px 5px;
+                                                    font-size: 25px;
+                                                }
+                                                .our-friends_slider_item_content h4 {
+                                                    margin: 21px 0;
+                                                    padding-bottom: 8px;
+                                                }
+                                                .our-friends_slider_item_content button {
+                                                    padding: 14px 43px 14px 43px;
+                                                }
+                                                .our-friends_arrow-left {
+                                                    top: 82%;
+                                                    left: 17%;
+                                                }
+                                                .our-friends_arrow-right {
+                                                    top: 82%;
+                                                    right: 17%;
+                                                }
+                                                .our-friends_arrow-left button,
+                                                .our-friends_arrow-right button {
+                                                    padding: 17px;
+                                                }
+                                                .our-friends_button {
+                                                    padding-top: 119px;
+                                                }
+                                                .our-friends_wrapper_inner {
+                                                    padding-left: 0px;
+                                                    padding-right: 0px;
+                                                }
+                                                /* ADDITION STYLES */
+                                                .help_title h3 {
+                                                    padding-top: 17px;
+                                                    font-size: 25px;
+                                                }
+                                                .help_icons h4 {
+                                                    font-size: 15px;
+                                                }
+                                                .help_icons_item img {
+                                                    width: 40%;
+                                                }
+                                                .help_icons_item {
+                                                    width: 130px;
+                                                }
+                                                .help_icons_item:nth-child(5) img {
+                                                    width: 16%;
+                                                }
+                                                .help_icons_item:nth-child(6) img {
+                                                    padding-left: 0px;
+                                                    padding-right: 0px;
+                                                }
+                                                .help_icons_item:nth-child(6) {
+                                                    padding-left: 0px;
+                                                    padding-right: 0px;
+                                                }
+                                                .help_icons_item-inner {
+                                                    grid-row-gap: 4px;
+                                                    padding-left: 0px;
+                                                }
+                                                .help_icons {
+                                                    padding-top: 13px;
+                                                    margin-bottom: 20px;
+                                                    padding-left: 2px;
+                                                    padding-right: 2px;
+                                                }
+                                                .help_icons_item:first-child {
+                                                    padding-left: 0px;
+                                                    padding-right: 0px;
+                                                }
+                                                .help_icons_item:first-child img {
+                                                    width: 30%;
+                                                }
+                                                /* ADDITION STYLES */
+                                                .addition_text_title {
+                                                    font-size: 25px;
+                                                    line-height: 130%;
+                                                }
+                                                .addition_wrapper {
+                                                    padding: 55px 15px 100px 15px;
+                                                }
+                                                .addition_text_subtitle {
+                                                    font-family: Arial, Helvetica, sans-serif;
+                                                    font-size: 15px;
+                                                    letter-spacing: 0px;
+                                                }
+                                                .addition_text h3 {
+                                                    width: 100%;
+                                                }
+                                                .addition_text h5 {
+                                                    margin-top: 9px;
+                                                    font-size: 15px;
+                                                }
+                                                .addition_text h5 img {
+                                                    margin-left: 1px;
+                                                }
+                                                .addition_image {
+                                                    width: auto;
+                                                    margin-bottom: -62px;
+                                                    margin-top: -33px;
+                                                }
+                                                .about_text_sub_subtitle {
+                                                    margin-top: -3px;
+                                                    text-align: justify;
+                                                    letter-spacing: 0.2px;
+                                                }
+                                                .addition_image img {
+                                                    width: 89%;
+                                                    margin-left: 19px;
+                                                    padding-top: 65px;
+                                                }
+                                                /* FOOTER STYLES */
+                                                .footer_wrapper_block_content-right h3 {
+                                                    margin-top: 8px;
+                                                }
+                                                .footer_wrapper_block_image {
+                                                    margin-top: 48px;
+                                                }
+                                                .footer_wrapper_block_image img {
+                                                    width: 89%;
+                                                }
+                                                .block_content-top {
+                                                    margin-right: 33px;
+                                                }
+                                                .footer_wrapper_block_content-right .last-link p {
+                                                    padding-right: 27px;
+                                                }
+                                                /* MODAL STYLES */
+                                                .modal {
+                                                    width: 76%;
+                                                    height: 35%;
+                                                    top: 36%;
+                                                    z-index: 100;
+                                                }
+                                                .modal-body_image {
+                                                    display: none;
+                                                }
+                                                .modal-body_content {
+                                                    max-width: 100%;
+                                                    padding: 0px 5px 0px 5px;
+                                                }
+                                                .close-popup {
+                                                    top: 13%;
+                                                    left: 81%;
+                                                }
+                                                .modal-body_content_title {
+                                                    margin-top: 15px;
+                                                }
+                                                .modal-body_content_text {
+                                                    margin: 14px 0 -46px 0;
+                                                }
+                                                .modal-body_content_title {
+                                                    text-align: -webkit-center;
+                                                    text-align: center;
+                                                }
+                                                .modal-body_content_subtitle {
+                                                    text-align: -webkit-center;
+                                                    text-align: center;
+                                                }
+                                                .modal-body_content_text {
+                                                    text-align: justify;
+                                                }
+                                                .modal-body_content ul {
+                                                    margin-top: 18px;
+                                                }
+                                            }
